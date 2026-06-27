@@ -13,3 +13,5 @@ python3 -m http.server 4173
 - Target domain: `mes.medicalframe.ai`
 - GitHub Pages custom domain file: `CNAME`
 - PDF asset: `downloads/MESbook.pdf`
+
+See `DEPLOYMENT.md` for DNS instructions.
