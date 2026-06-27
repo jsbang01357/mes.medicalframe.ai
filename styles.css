@@ -1,0 +1,310 @@
+:root {
+  color: #132037;
+  background: #f5f3ec;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans KR", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #07152f;
+  --blue: #145f9f;
+  --teal: #1f918c;
+  --gold: #b7781f;
+  --paper: #fffdf7;
+  --line: rgba(7, 21, 47, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #f5f3ec;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--ink);
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  min-height: 88svh;
+  overflow: hidden;
+  color: #ffffff;
+  background: var(--ink);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(4, 13, 31, 0.92), rgba(4, 13, 31, 0.7) 42%, rgba(4, 13, 31, 0.26)),
+    url("assets/mesbook-cover.jpg") center right 20% / cover no-repeat;
+}
+
+.topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 22px 0;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.topbar div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 18px;
+}
+
+.topbar a:not(.brand) {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 0 0 12svh;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  color: #ffffff;
+  font-size: clamp(2.55rem, 8vw, 5.9rem);
+  word-break: keep-all;
+}
+
+.subtitle {
+  margin-top: 18px;
+  color: #d7ecff;
+  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+  font-weight: 800;
+}
+
+.lead {
+  max-width: 620px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.primary {
+  color: #07152f;
+  background: #ffffff;
+}
+
+.secondary {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.info-band,
+.license-band {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 76px 0;
+}
+
+.info-band {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.book-cover img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 26px 70px rgba(7, 21, 47, 0.24);
+}
+
+.book-info h2,
+.license-band h2 {
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  word-break: keep-all;
+}
+
+.book-info p,
+.license-band p {
+  max-width: 760px;
+  margin-top: 22px;
+  color: #3c4a61;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 30px 0 0;
+}
+
+dl div {
+  min-height: 92px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+dt {
+  color: var(--blue);
+  font-size: 0.83rem;
+  font-weight: 950;
+}
+
+dd {
+  margin: 9px 0 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  font-weight: 850;
+}
+
+.license-band {
+  border-top: 1px solid var(--line);
+}
+
+.license-band ul {
+  display: grid;
+  gap: 10px;
+  max-width: 840px;
+  margin: 28px 0 0;
+  padding-left: 20px;
+  color: #2f3e56;
+  line-height: 1.75;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 30px 0 42px;
+  border-top: 1px solid var(--line);
+  color: #58677f;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 92svh;
+  }
+
+  .hero-bg {
+    background:
+      linear-gradient(180deg, rgba(4, 13, 31, 0.7), rgba(4, 13, 31, 0.93) 56%, rgba(4, 13, 31, 0.98)),
+      url("assets/mesbook-cover.jpg") top center / cover no-repeat;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  .topbar div {
+    display: none;
+  }
+
+  .hero-content {
+    padding-bottom: 8svh;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+
+  .actions a {
+    width: 100%;
+  }
+
+  .info-band {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 54px 0;
+  }
+
+  .book-cover {
+    max-width: 280px;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+  }
+
+  .license-band {
+    padding: 54px 0;
+  }
+}
